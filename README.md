@@ -1,84 +1,89 @@
 # vue-cli [![Build Status](https://img.shields.io/circleci/project/vuejs/vue-cli/master.svg)](https://circleci.com/gh/vuejs/vue-cli) [![npm package](https://img.shields.io/npm/v/vue-cli.svg)](https://www.npmjs.com/package/vue-cli)
 
-A simple CLI for scaffolding Vue.js projects.
+Vue.js 프로젝트를 스캐폴딩하는 간단한 커맨드라인 인터페이스(CLI) 입니다.
 
-### Installation
+### 설치
 
-Prerequisites: [Node.js](https://nodejs.org/en/) (>=4.x, 6.x preferred) and [Git](https://git-scm.com/).
+사전 필요 도구: [Node.js](https://nodejs.org/en/) (>=4.x, 6.x 추천) 와 [Git](https://git-scm.com/).
 
 ``` bash
 $ npm install -g vue-cli
 ```
 
-### Usage
+### 사용하기
 
 ``` bash
-$ vue init <template-name> <project-name>
+$ vue init <템플릿 이름> <프로젝트 이름>
 ```
 
-Example:
+예제:
 
 ``` bash
 $ vue init webpack my-project
 ```
 
-The above command pulls the template from [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack), prompts for some information, and generates the project at `./my-project/`.
+위의 명령어는 템플릿을 [vuejs-templates / webpack](https://github.com/vuejs-templates/webpack)에서 가져와 몇 가지 질문을 한 후 `./my-project/`에 프로젝트를 생성합니다.
 
-### Official Templates
+### 공식 템플릿 목록
 
-The purpose of official Vue project templates are to provide opinionated, battery-included development tooling setups so that users can get started with actual app code as fast as possible. However, these templates are un-opinionated in terms of how you structure your app code and what libraries you use in addition to Vue.js.
+공식 Vue 프로젝트 템플릿이 존재하는 목적은 사용자가 가능한 한 빨리 실제 애플리케이션 코드 작성을 시작할 수 있도록 대부분의 기능을 갖춘 개발 도구 설정을 제공하는 것입니다. 그러나 이러한 템플릿은 Vue.js 외에도 사용하는 라이브러리와 애플리케이션 코드를 구성하는 방법에 대해 논쟁의 여지가 없습니다.
 
-All official project templates are repos in the [vuejs-templates organization](https://github.com/vuejs-templates). When a new template is added to the organization, you will be able to run `vue init <template-name> <project-name>` to use that template. You can also run `vue list` to see all available official templates.
+모든 공식 프로젝트 템플릿은 [vuejs-templates 조직](https://github.com/vuejs-templates)에 있습니다. 새로운 템플릿이 추가되면 `vue init <템플릿 이름> <프로젝트 이름>`을 실행하여 해당 템플릿을 사용할 수 있습니다. `vue list`를 실행하여 사용 가능한 모든 공식 템플릿을 볼 수도 있습니다.
 
-Current available templates include:
+현재 사용할 수 있는 템플릿 목록입니다.
 
-- [webpack](https://github.com/vuejs-templates/webpack) - A full-featured Webpack + vue-loader setup with hot reload, linting, testing & css extraction.
+- [webpack](https://github.com/vuejs-templates/webpack) - hot-reload, linting, 테스트 및 CSS 추출 기능을 갖춘 대부분의 기능을 갖추고 있는 Webpack + vue-loader 설정입니다.
 
-- [webpack-simple](https://github.com/vuejs-templates/webpack-simple) - A simple Webpack + vue-loader setup for quick prototyping.
+- [webpack-simple](https://github.com/vuejs-templates/webpack-simple) - 단순히 Webpack과 vue-loader만 포함합니다. 빠르게 프로토타입을 만들 때 사용합니다.
 
-- [browserify](https://github.com/vuejs-templates/browserify) - A full-featured Browserify + vueify setup with hot-reload, linting & unit testing.
+- [browserify](https://github.com/vuejs-templates/browserify) - hot-reload, linting 및 단위 테스팅 등 대부분의 기능을 갖춘 Browserify + vueify 설정입니다.
 
-- [browserify-simple](https://github.com/vuejs-templates/browserify-simple) - A simple Browserify + vueify setup for quick prototyping.
+- [browserify-simple](https://github.com/vuejs-templates/browserify-simple) 단순히 Browserify와 vueify만 포함합니다. 빠르게 프로토타입을 만들 때 사용합니다.
 
-- [simple](https://github.com/vuejs-templates/simple) - The simplest possible Vue setup in a single HTML file
 
-### Custom Templates
+- [simple](https://github.com/vuejs-templates/simple) - 가장 단순하게 한 HTML 파일에 Vue 설정을 담고 있습니다.
 
-It's unlikely to make everyone happy with the official templates. You can simply fork an official template and then use it via `vue-cli` with:
+### 사용자 정의 템플릿
+
+공식 템플릿을 사용하여 모두를 만족 시킬 수는 없습니다. 공식 템플릿을 fork 한 다음 `vue-cli`를 통해 다음과 같이 사용할 수 있습니다.
 
 ``` bash
 vue init username/repo my-project
 ```
 
-Where `username/repo` is the GitHub repo shorthand for your fork.
+`username/repo`는 fork 한 Github 프로젝트 입니다.
 
-The shorthand repo notation is passed to [download-git-repo](https://github.com/flipxfx/download-git-repo) so you can also use things like `bitbucket:username/repo` for a Bitbucket repo and `username/repo#branch` for tags or branches.
+이 저장소 표기법은 [download-git-repo] (https://github.com/flipxfx/download-git-repo)를 통해 처리되므로 Bitbucket을 사용하는 경우 `bitbucket:username/repo`로 사용하면 됩니다. 태그 또는 브랜치를 이용하는 경우 `username/repo#branch`로 사용하십시오.
 
-If you would like to download from a private repository use the `--clone` flag and the cli will use `git clone` so your SSH keys are used.
 
-### Local Templates
+개인 저장소에서 다운로드하고 싶다면 `--clone` 플래그를 추가하십시오. 그러면 cli는 SSH 키를 사용하여 `git clone` 을 합니다.
 
-Instead of a GitHub repo, you can also use a template on your local file system:
+### 로컬 템플릿
+
+GitHub 저장소 대신 로컬 파일 시스템의 템플릿을 사용할 수도 있습니다.
 
 ``` bash
 vue init ~/fs/path/to-custom-template my-project
 ```
 
-### Writing Custom Templates from Scratch
+### 사용자 정의 템플릿 작성해보기
 
-- A template repo **must** have a `template` directory that holds the template files.
+- 템플릿 저장소는  템플릿 파일을 보유하고있는 `template` 디렉토리가 **반드시** 있어야합니다.
 
-- A template repo **may** have a metadata file for the template which can be either a `meta.js` or `meta.json` file. It can contain the following fields:
+- 템플릿 저장소는 템플릿을 위한 메타 데이터 파일을 `meta.js` 또는 `meta.json` 파일로 사용할 수 있습니다. 다음 필드를 포함할 수 있습니다.
 
-  - `prompts`: used to collect user options data;
+  - `prompts`: 사용자 옵션 데이터를 수집하는 데 사용됩니다.
 
-  - `filters`: used to conditional filter files to render.
+  - `filters`: 조건부 필터 파일을 렌더링하는 데 사용됩니다.
 
-  - `completeMessage`: the message to be displayed to the user when the template has been generated. You can include custom instruction here.
+  - `completeMessage`: 템플릿이 생성되었을 때 사용자에게 표시 될 메시지. 여기서 사용자 정의 명령어를 포함 할 수 있습니다.
+
+
+
 
 #### prompts
 
-The `prompts` field in the metadata file should be an object hash containing prompts for the user. For each entry, the key is the variable name and the value is an [Inquirer.js question object](https://github.com/SBoudrias/Inquirer.js/#question). Example:
+메타 데이터 파일의 `prompts` 필드는 사용자를 위한 프롬프트를 포함하는 해시 객체여야 합니다. 각 항목에 대해 키는 변수 이름이고 값은 [Inquirer.js 질문 객체](https://github.com/SBoudrias/Inquirer.js/#question)입니다. 예:
 
 ``` json
 {
@@ -92,11 +97,12 @@ The `prompts` field in the metadata file should be an object hash containing pro
 }
 ```
 
-After all prompts are finished, all files inside `template` will be rendered using [Handlebars](http://handlebarsjs.com/), with the prompt results as the data.
+모든 프롬프트가 끝나면 `template` 안의 모든 파일은 [Handlebars](http://handlebarsjs.com/)를 사용해 렌더링하며, 프롬프트 결과가 데이터로 표시됩니다.
 
-##### Conditional Prompts
+##### 조건부 프롬프트
 
-A prompt can be made conditional by adding a `when` field, which should be a JavaScript expression evaluated with data collected from previous prompts. For example:
+프롬프트는 `when` 필드를 추가하여 조건부로 만들 수 있습니다. 이 필드는 이전 프롬프트에서 수집한 데이터인 JavaScript 표현식이어야합니다. 예:
+
 
 ``` json
 {
@@ -119,19 +125,19 @@ A prompt can be made conditional by adding a `when` field, which should be a Jav
 }
 ```
 
-The prompt for `lintConfig` will only be triggered when the user answered yes to the `lint` prompt.
+`lintConfig`에 대한 프롬프트는 사용자가 `lint` 프롬프트에 yes라고 대답했을때에 만 트리거됩니다.
 
-##### Pre-registered Handlebars Helpers
+##### 사전 등록된 Handlebars 헬퍼
 
-Two commonly used Handlebars helpers, `if_eq` and `unless_eq` are pre-registered:
+일반적으로 사용되는 Handlebars 헬퍼인 `if_eq`와 `unless_eq`는 사전에 등록되어 사용할 수 있습니다.
 
 ``` handlebars
 {{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 ```
 
-##### Custom Handlebars Helpers
+##### 사용자 정의 Handlebars 헬퍼
 
-You may want to register additional Handlebars helpers using the `helpers` property in the metadata file. The object key is the helper name:
+메타 데이터 파일의 `helpers` 속성을 사용하여 추가 Handlebars 헬퍼를 등록 할 수 있습니다. 객체의 키는 헬퍼 이름입니다.
 
 ``` js
 module.exports = {
@@ -141,15 +147,15 @@ module.exports = {
 }
 ```
 
-Upon registration, they can be used as follows:
+등록시 다음과 같이 사용할 수 있습니다.
 
 ``` handlebars
 {{ lowercase name }}
 ```
 
-#### File filters
+#### 파일 필터
 
-The `filters` field in the metadata file should be an object hash containing file filtering rules. For each entry, the key is a [minimatch glob pattern](https://github.com/isaacs/minimatch) and the value is a JavaScript expression evaluated in the context of prompt answers data. Example:
+메타 데이터 파일의 `filters` 필드는 파일 필터링 규칙을 포함하는 해시 객체여야합니다. 각 항목에 대해 키는 [minimatch glob 패턴](https://github.com/isaacs/minimatch)이고 값은 프롬프트 응답 데이터의 컨텍스트에서 처리된 JavaScript 표현식입니다. 예:
 
 ``` json
 {
@@ -159,13 +165,13 @@ The `filters` field in the metadata file should be an object hash containing fil
 }
 ```
 
-Files under `test` will only be generated if the user answered yes to the prompt for `needTests`.
+`test`에 있는 파일은 사용자가 `needTests`에 대한 프롬프트에 대해 yes라고 답한 경우에만 생성됩니다.
 
-Note that the `dot` option for minimatch is set to `true` so glob patterns would also match dotfiles by default.
+minimatch의 `dot` 옵션은`true`로 설정되어 있습니다. 그래서 glob 패턴은 기본적으로 dotfile과 일치합니다.
 
-#### Skip rendering
+#### Skip 렌더링
 
-The `skipInterpolation` field in the metadata file should be a [minimatch glob pattern](https://github.com/isaacs/minimatch). The files matched should skip rendering. Example:
+메타 데이터 파일의 `skipInterpolation` 필드는 [minimatch glob 패턴](https://github.com/isaacs/minimatch)이어야 합니다. 일치하는 파일은 렌더링을 건너 뜁니다. 예:
 
 ``` json
 {
@@ -173,9 +179,9 @@ The `skipInterpolation` field in the metadata file should be a [minimatch glob p
 }
 ```
 
-#### Additional data available in meta.{js,json}
+#### meta.{js, json}에서 사용할 수 있는 추가 데이터
 
-- `destDirName` - destination directory name
+- `destDirName` - 목적지 디렉터리 이름
 
 ```json
 {
@@ -183,7 +189,7 @@ The `skipInterpolation` field in the metadata file should be a [minimatch glob p
 }
 ```
 
-- `inPlace` - generating template into current directory
+- `inPlace` - 현재 디렉터리에 템플릿 생성
 
 ```json
 {
@@ -191,25 +197,25 @@ The `skipInterpolation` field in the metadata file should be a [minimatch glob p
 }
 ```
 
-### Installing a specific template version
+### 특정 템플릿 버전 설치하기
 
-`vue-cli` uses the tool [`download-git-repo`](https://github.com/flipxfx/download-git-repo) to download the official templates used. The `download-git-repo` tool allows you to indicate a specific branch for a given repository by providing the desired branch name after a pound sign (`#`).
+`vue-cli`는 공식 템플릿을 다운로드하기 위해 [`download-git-repo`](https://github.com/flipxfx/download-git-repo) 도구를 사용합니다. `download-git-repo` 도구는 파운드 기호 (`#`) 뒤에 원하는 브랜치 이름을 추가하여 저장소에 대한 특정 브랜치를 가져올 수 있도록 합니다..
 
-The format needed for a specific official template is:
+특정 공식 템플릿에 필요한 포맷은 다음과 같습니다.
 
+``` bash
+vue init <템플릿 이름>#<브랜치 이름> <프로젝트 이름>
 ```
-vue init <template-name>#<branch-name> <project-name>
-```
 
-Example:
+예제:
 
-Installing the [`1.0` branch](https://github.com/vuejs-templates/webpack-simple/tree/1.0) of the webpack-simple vue template:
+webpack-simple vue 템플릿의 [`1.0` branch](https://github.com/vuejs-templates/webpack-simple/tree/1.0) 설치하기:
 
-```
+``` bash
 vue init webpack-simple#1.0 mynewproject
 ```
 
 
-### License
+### 라이센스
 
 [MIT](http://opensource.org/licenses/MIT)
